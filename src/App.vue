@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="nav">
+    <Header></Header>
+    <router-view/>
+    <Footer :link1="link1"></Footer>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Footer from './layout/Footer.vue'
+import Header from './layout/Header.vue'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  components: { Header, Footer },
+  data(){
+    return {
+      link1:[
+       { herf:"fejfjwef",
+        title:"lhfeihfie"},
+        { herf:"fejfjwef",
+        title:"lhfeihfie"},
+        { herf:"fejfjwef",
+        title:"lhfeihfie"}
+      ]
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
